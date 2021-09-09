@@ -22,7 +22,7 @@ CREATE TABLE student (
 
 -- CREATING TABLE STUDENT
 CREATE TABLE studentMarks(
-mark_id INT PRIMARY KEY AUTO_INCREMENT,
+markId INT PRIMARY KEY AUTO_INCREMENT,
 studentId INT NOT NULL,
 subjectName VARCHAR(20),
 subjectMarks INT,
@@ -32,7 +32,7 @@ CHECK (subjectMarks>=0 AND subjectMarks<=100)
 
 
 -- INSERTING VALUES INTO student
-(studentFirstName,studentLastName,studentSex,studentClass,studentDivision,studentAge,studentAddress,studentPhoneNumber)
+INSERT INTO student(studentFirstName,studentLastName,studentSex,studentClass,studentDivision,studentAge,studentAddress,studentPhoneNumber)
 VALUES 
 ('Ravi','Manohar','M',5,'A',10,'3-A,SFS Courtyard,Pattom,Trivandrum',6238456897),
 ('Ken','Mathew','M',10,'B',15,'5-B,Jawahar Nagar,Kowdiar,Trivandrum',9946285691),
@@ -98,5 +98,5 @@ INSERT INTO studentMarks(studentId,subjectName,subjectMarks) VALUES
 (14,'Maths',55),
 (15,'Science',15),
 (15,'Social Science',63),
-(15,'Maths',83)
+(15,'Maths',83);
 */

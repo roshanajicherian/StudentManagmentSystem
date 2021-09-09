@@ -16,6 +16,9 @@
 ('Angela','Roy','F',7,'A',12,'12-C,Microwave Colony,Ulloor',8569742365),
 ('Diya','Birla','F',10,'B',15,'13-A, Christ Nagar Colony,Kowdiar',7413321955)
 
+-- Data which has been inserted later (Which was not there in the INSERT query)
+
+('Rekha','Banerjee','F',10,'A',15,'12-C, 3-A,LIC Lane,Pattom',7417411955)
 
 -- studentMarks Values
 (1,'Maths',83),
