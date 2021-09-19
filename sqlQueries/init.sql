@@ -98,6 +98,7 @@ INSERT INTO studentMarks(studentId,subjectName,subjectMarks) VALUES
 (15,'Social Science',63),
 (15,'Maths',83);
 
+-- Creating subject names table
 CREATE TABLE subjectNames(subjectName VARCHAR(30) PRIMARY KEY NOT NULL);
 INSERT INTO subjectNames(subjectName) VALUES 
 ('Maths'),
@@ -107,3 +108,21 @@ INSERT INTO subjectNames(subjectName) VALUES
 ('Biology'),
 ('Chemistry'),
 ('Physics');*/
+
+
+-- Creating student_backup table
+CREATE TABLE student_backup
+(
+    studentId INT PRIMARY KEY,
+    studentFirstName VARCHAR(30) NOT NULL,
+    studentLastName VARCHAR(30) NOT NULL,
+    studentSex VARCHAR(1) NOT NULL,
+    studentClass INT NOT NULL,
+    studentDivision VARCHAR(2) NOT NULL,
+    studentAge INT NOT NULL,
+    studentAddress VARCHAR(50),
+    studentPhoneNumber VARCHAR(13) UNIQUE,
+	op VARCHAR(10) NOT NULL,
+    opTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
+    CHECK (studentSex='M' OR studentSex='F')
+);
