@@ -1,7 +1,6 @@
 -- Creating A DATABASE FOR THE PROJECT
 
-/*
-CREATE database StudentManagmentSystem;
+/*CREATE database StudentManagmentSystem;
 USE StudentManagmentSystem;
 
 
@@ -18,15 +17,14 @@ CREATE TABLE student (
     studentPhoneNumber VARCHAR(13) UNIQUE,
     CHECK (studentSex='M' OR studentSex='F')
 );
-
-
 -- CREATING TABLE STUDENT
 CREATE TABLE studentMarks(
 markId INT PRIMARY KEY AUTO_INCREMENT,
 studentId INT NOT NULL,
-subjectName VARCHAR(20),
+subjectName VARCHAR(30),
 subjectMarks INT,
 FOREIGN KEY studentMarks(studentId) REFERENCES student(studentId),
+FOREIGN KEY stuentMarks(subjectName) REFERENCES subjectNames(subjectName),
 CHECK (subjectMarks>=0 AND subjectMarks<=100)
 );
 
@@ -99,4 +97,13 @@ INSERT INTO studentMarks(studentId,subjectName,subjectMarks) VALUES
 (15,'Science',15),
 (15,'Social Science',63),
 (15,'Maths',83);
-*/
+
+CREATE TABLE subjectNames(subjectName VARCHAR(30) PRIMARY KEY NOT NULL);
+INSERT INTO subjectNames(subjectName) VALUES 
+('Maths'),
+('Science'),
+('Social Science'),
+('English'),
+('Biology'),
+('Chemistry'),
+('Physics');*/
