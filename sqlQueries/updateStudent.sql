@@ -26,5 +26,5 @@ BEGIN
 	WHERE studentId=studentIdIn;
 END $$
 DELIMITER ;
--- The data to be updated will be passed in as argumnets from the Python file. 
+
 CALL updateStudent(1,'Jay','Manohar','M',5,'A',10,'3-A,SFS Courtyard,Pattom,Trivandrum',6238456897);

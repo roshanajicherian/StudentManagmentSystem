@@ -14,5 +14,4 @@ BEGIN
 END$$
 DELIMITER ;
 
--- The data to be inserted will be passed in as argumnets from the Python file. 
 /*CALL addStudent('Rekha','Banerjee','F',10,'A',15,'12-C, 3-A,LIC Lane,Pattom',7417411955);*/

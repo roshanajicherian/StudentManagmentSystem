@@ -1,6 +1,6 @@
 -- Creating A DATABASE FOR THE PROJECT
 
-/*CREATE database StudentManagmentSystem;
+CREATE database StudentManagmentSystem;
 USE StudentManagmentSystem;
 
 
@@ -107,7 +107,7 @@ INSERT INTO subjectNames(subjectName) VALUES
 ('English'),
 ('Biology'),
 ('Chemistry'),
-('Physics');*/
+('Physics');
 
 
 -- Creating student_backup table

@@ -8,7 +8,7 @@ BEGIN
 END$$
 DELIMITER ;
 
---Calling the procedure...
+-- Calling the procedure
 
 CALL findAverageMarks(8, 'Maths');
 
