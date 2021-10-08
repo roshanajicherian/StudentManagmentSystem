@@ -1,15 +1,19 @@
--- Creating the procedure...
+-- Creating the function...
 
-DROP PROCEDURE IF EXISTS findAverageMarks;
+DROP FUNCTION IF EXISTS findAverageMarks;
 DELIMITER $$
-CREATE PROCEDURE findAverageMarks(classIn INT, subjectNameIn VARCHAR(30))
+CREATE FUNCTION findAverageMarks(classIn INT, subjectNameIn VARCHAR(30)) RETURNS INT
 BEGIN
-	SELECT studentClass, subjectName, avg(subjectMarks) FROM student INNER JOIN studentMarks ON student.studentId = studentMarks.studentId WHERE (subjectName = subjectNameIn AND studentClass = classIn);
+	DECLARE avgMark INT;
+	SELECT avg(subjectMarks) FROM student INNER JOIN studentMarks ON student.studentId = studentMarks.studentId 
+    WHERE (subjectName = subjectNameIn AND studentClass = classIn)
+    INTO avgMark;
+    RETURN avgMark;
 END$$
 DELIMITER ;
 
 -- Calling the procedure
 
-CALL findAverageMarks(8, 'Maths');
+SELECT findAverageMarks(8, 'Maths');
 
 
